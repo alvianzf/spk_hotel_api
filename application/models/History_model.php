@@ -8,5 +8,4 @@ class History_Model extends MY_Model
     {
         parent::__construct();
     }
-    
 }

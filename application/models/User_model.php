@@ -1,6 +1,6 @@
 <?php defined ('BASEPATH') OR exit ('No direct script access allowed!');
 
-class User_model extends my_model
+class User_model extends MY_Model
 {
     public $_table = 'users';
 
@@ -8,5 +8,4 @@ class User_model extends my_model
     {
         parent::__construct();
     }
-
 }
