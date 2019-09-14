@@ -18,7 +18,7 @@ router.post('/', function(req, res) {
 })
 
 router.put('/:id', function(req, res) {
-    User.findOneAndUpdate({_id: req.param.id}, req.body, function(err) {
+    User.findOneAndUpdate({_id: req.params.id}, req.body, function(err) {
         if (err) res.status(422).json({status: 422, message: err.message});
 
         return res.status(200).json({status: 200, message: 'Updated'});
@@ -26,7 +26,7 @@ router.put('/:id', function(req, res) {
 })
 
 router.delete('/:id', function(req, res) {
-    User.findOneAndDelete({_id: req.param.id}, function(err) {
+    User.findOneAndDelete({_id: req.params.id}, function(err) {
         if (err) return res.status(422).json({status: 422, message: err.message});
 
         return res.status(200).json({status: 200, message: 'Deleted'});
